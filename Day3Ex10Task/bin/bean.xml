@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+ <!-- services -->
+ 
+<bean id="s1" class="com.model.Student">
+ 
+<property name="cities">
+<list>
+<ref bean="s2"></ref>
+</list>
+</property>
+
+<property name="mobiles">
+<set>
+<value>779891</value>
+<value>888893</value>
+</set>
+</property>
+ 
+<property name="contrycode">
+<map>
+<entry	key="101" value-ref="s2"></entry>
+</map>
+
+</property>
+
+</bean>
+
+<bean id="s2" class="com.model.Address">
+  <property name="areaname" value="Pangari"></property>
+  <property name="cityname" value="Akole"></property>
+</bean>
+
+</beans>

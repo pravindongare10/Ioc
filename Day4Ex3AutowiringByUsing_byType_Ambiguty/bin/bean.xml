@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+ <!-- services -->
+ 
+ <bean id="s1" class="com.model.Student" autowire="byType">
+	<property name="id" value="1" ></property >
+ 	<property name="name" value="Pravin"></property>
+ </bean>
+  <!-- Ambiguty Error found when we use -->
+  <bean id="addddr" class="com.model.Address" autowire-candidate="false">
+  <property name="areaname" value="Pangari"></property>
+  <property name="cityname" value="Akole"></property>
+   </bean>
+   
+   <bean id="ad" class="com.model.Address">
+  <property name="areaname" value="Otur"></property>
+  <property name="cityname" value="Junnar"></property>
+   </bean>
+</beans>

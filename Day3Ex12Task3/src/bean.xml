@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+ <!-- services -->
+ 
+	<bean id="s2" class="com.model.Supplier">
+ 
+	<property name="supid" value="1"></property>
+ 	<property name="supname" value="Ashitosh"></property>
+ 	<property name="supmobno" value="78655433"></property>
+ 	<property name="cities">
+ 	<list>
+ 	<value>Pune</value>
+ 	<value>Mubmbai</value>
+ 	</list>
+ 	</property>
+ 	</bean>
+	
+	<bean id="s3" class="com.model.Product" parent="s2">
+ 
+	<property name="proid" value="2"></property>
+ 	<property name="proname" value="Bike"></property>
+ 	<property name="proprice" value="200000.44"></property>
+ 	
+	</bean>
+	
+</beans>
